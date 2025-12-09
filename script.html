@@ -1,0 +1,65 @@
+// Hamburger Menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Form Handling
+const leadForm = document.getElementById('lead-form');
+const modal = document.getElementById('thank-you-modal');
+const closeModal = document.querySelector('.close');
+
+if (leadForm) {
+    leadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Simulate submit
+        console.log('Lead Form Submitted');
+        modal.style.display = 'flex';
+    });
+}
+
+if (closeModal) {
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+}
+
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (contactForm.checkValidity()) {
+            console.log('Contact Form Submitted');
+            alert('Message Sent!');
+        } else {
+            alert('Please fill all fields.');
+        }
+    });
+}
+
+const blogSubscribe = document.getElementById('blog-subscribe');
+if (blogSubscribe) {
+    blogSubscribe.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log('Blog Subscribe Submitted');
+        alert('Subscribed!');
+    });
+}
+
+// Fade-in on Scroll
+const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+sections.forEach(section => {
+    section.classList.add('fade-in');
+    observer.observe(section);
+});
