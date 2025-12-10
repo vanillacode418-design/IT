@@ -1,74 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Automation Agency: Unlock futuristic AI automation for your business. Automate workflows, generate leads, and scale effortlessly.">
-    <title>AI Automation Agency - Landing Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kaizen Automation Hub — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">AIAA</div>
-            <ul class="nav-links">
-                <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
-                <li><a href="how-we-work.html"><i class="fas fa-rocket"></i> How We Work</a></li>
-                <li><a href="tools.html"><i class="fas fa-tools"></i> Tools</a></li>
-                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Unlock Futuristic AI Automation for Your Business</h1>
-                <p>Automate workflows, generate leads, and scale effortlessly with our AI services.</p>
-                <form id="lead-form">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <select required>
-                        <option value="">Business Type</option>
-                        <option value="real-estate">Real Estate Agent</option>
-                        <option value="clinic">Clinic</option>
-                        <option value="school">School</option>
-                        <option value="fitness">Fitness Trainer</option>
-                        <option value="shop">Local Shop</option>
-                    </select>
-                    <button type="submit">Get Free Consultation</button>
-                </form>
-                <div class="cta-buttons">
-                    <a href="services.html" class="btn">Explore Services</a>
-                    <a href="contact.html" class="btn">Contact Us</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="thank-you-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Thank you for your interest! We'll get back to you soon.</p>
-        </div>
+<body class="dark">
+  <!-- SIDEBAR + TOPNAV (public website feel with VAPI-like style) -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-glow">KAIZEN</div>
+      <div class="brand-sub">Automation Hub</div>
     </div>
+    <nav class="mainnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="policies.html">Policies</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-ghost">Book Free Consultation</button>
+    </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 AI Automation Agency. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+  <!-- HERO: Fullscreen slider with 5 URL-based banners -->
+  <main>
+    <section class="hero">
+      <div class="hero-slider" id="heroSlider" data-autoplay="true">
+        <!-- Slide 1 -->
+        <div class="slide" data-index="1" style="background-image:url('https://source.unsplash.com/1600x900/?ai,voice,tech')">
+          <div class="slide-inner">
+            <h1>AI Virtual Calling Agents for Every Business</h1>
+            <p>Deploy voice-first virtual agents that convert, support, and scale — fully scriptable and multilingual.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#contact">Book Free Consultation</a>
+              <a class="btn btn-outline" href="services.html">See Services</a>
+            </div>
+          </div>
         </div>
-        <a href="#">Privacy Policy</a>
-    </footer>
 
-    <script src="script.js"></script>
+        <!-- Slide 2 -->
+        <div class="slide" data-index="2" style="background-image:url('https://source.unsplash.com/1600x900/?automation,workflow,code')">
+          <div class="slide-inner">
+            <h1>Automation Workflows: Zapier • Make • n8n • Node-RED</h1>
+            <p>End-to-end automation that ties your CRM, billing, messaging and devices together.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#contact">Book Free Consultation</a>
+              <a class="btn btn-outline" href="services.html">Workflow Examples</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" data-index="3" style="background-image:url('https://source.unsplash.com/1600x900/?iot,smart,energy')">
+          <div class="slide-inner">
+            <h1>IoT + AI Solutions: Smart Energy • Water Systems • Sensors</h1>
+            <p>Real-time sensors + intelligent automation for efficient operations and alerts.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#contact">Book Free Consultation</a>
+              <a class="btn btn-outline" href="services.html">Explore IoT</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide" data-index="4" style="background-image:url('https://source.unsplash.com/1600x900/?enterprise,integrations,api')">
+          <div class="slide-inner">
+            <h1>Enterprise-Grade Integrations: 50+ Platforms Supported</h1>
+            <p>Secure connectors and custom middleware for reliable, auditable integrations.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#contact">Book Free Consultation</a>
+              <a class="btn btn-outline" href="pricing.html">See Plans</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide" data-index="5" style="background-image:url('https://source.unsplash.com/1600x900/?startup,ai,company')">
+          <div class="slide-inner">
+            <h1>Build Anything with Kaizen — Your AI Transformation Partner</h1>
+            <p>From PoC to production: architecture, voice, bots, and observability.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#contact">Book Free Consultation</a>
+              <a class="btn btn-outline" href="services.html">Get Started</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="slider-controls" id="sliderControls"></div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section class="what-i-do container">
+      <h2>Your Complete AI Automation Partner</h2>
+      <p class="lead">
+        Kaizen delivers voice AI, text AI, virtual agents, automation workflows, APIs, SaaS products, and IoT dashboards — built for reliability and privacy-first deployments.
+      </p>
+      <div class="services-grid">
+        <article class="gloss-card">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
+          <h3>Voice AI</h3>
+          <p>Natural conversations, IVR, multilingual synthesis and recognition.</p>
+        </article>
+        <article class="gloss-card">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/></svg>
+          <h3>Text AI</h3>
+          <p>Contextual assistants, summarization, and LLM-backed workflows.</p>
+        </article>
+        <article class="gloss-card">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18" /></svg>
+          <h3>Virtual Agents</h3>
+          <p>Sales, support, reminders, booking and more — voice & text channels.</p>
+        </article>
+        <article class="gloss-card">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M2 12h8l2 8 2-16 2 8h8" /></svg>
+          <h3>Automation Workflows</h3>
+          <p>Event-driven automations across apps and devices.</p>
+        </article>
+        <article class="gloss-card">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+          <h3>APIs & SaaS</h3>
+          <p>Scalable APIs, SDKs, and managed SaaS deployments.</p>
+        </article>
+        <article class="gloss-card">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 3h18v6H3zM3 15h18v6H3z"/></svg>
+          <h3>IoT & Dashboards</h3>
+          <p>Telemetry, alerting, dashboards, and device orchestration.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SHOWCASE: Virtual Calling Use Cases (50+) -->
+    <section class="use-cases container">
+      <h2>Virtual Calling Use Cases</h2>
+      <p class="lead">50+ ready-to-deploy call flows and templates for every industry.</p>
+      <div class="cases-grid">
+        <!-- We'll list 50 cards programmatically in HTML for portability -->
+        <!-- Use same .case-card style; hover animations enabled in CSS -->
+        <script>
+          // This small inline script inserts 50 cards to keep HTML slimmer.
+          (function(){
+            const cases = [
+"Sales calls","Lead qualification","Customer support","Emergency helpdesk","Appointment scheduling",
+"COD verification","Medicine reminders","Clinic reminders","Class notifications","Payment reminders",
+"Delivery confirmation","Restaurant booking","Travel agent calls","School announcements","Fitness trainer reminders",
+"Real estate follow-ups","Loan reminder calls","HR screening calls","Event RSVP calls","Automated surveys",
+"Ticket booking confirmation","Subscription renewal reminders","Utility bill reminders","Insurance follow-ups","Warranty checks",
+"Feedback collection calls","Product return scheduling","Subscription activation calls","Outage notifications","Maintenance alerts",
+"Inventory restock alerts","Donor outreach calls","Political outreach calls","NGO volunteer coordination","Product launch calls",
+"Survey recruitment calls","Debt collection reminders","Appointment confirmations","Candidate interview reminders","Customer NPS calls",
+"Order cancellation recovery","Cross-sell calls","Upsell appointment setting","Class attendance reminders","Electricity usage alerts",
+"Water usage alerts","Smart-meter thresholds","Fleet dispatch alerts","Security alarm follow-ups","On-call shift notifications"
+            ];
+            const grid = document.createElement('div');
+            cases.forEach((c, i) => {
+              const card = document.createElement('div');
+              card.className = 'case-card';
+              card.innerHTML = `<svg class="small-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><h4>${c}</h4><p>Template flow for ${c.toLowerCase()} via voice or SMS.</p>`;
+              grid.appendChild(card);
+            });
+            grid.className = 'cases-grid-list';
+            document.currentScript.parentNode.appendChild(grid);
+          })();
+        </script>
+      </div>
+    </section>
+
+    <!-- AUTOMATION TOOLS PORTFOLIO -->
+    <section class="tools container">
+      <h2>Automation Tools Portfolio</h2>
+      <p class="lead">We integrate and build projects on the leading automation and integration platforms.</p>
+
+      <div class="tool-category">
+        <h3>Zapier / Make / n8n Alternatives</h3>
+        <div class="tool-grid">
+          <!-- list -->
+          <div class="tool-card"><img src="assets/img/zapier.svg" alt="" class="tool-icon"><h4>Zapier</h4><p>Cloud automations & triggers.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/make.svg" alt="" class="tool-icon"><h4>Make.com</h4><p>Visual integrations & scenarios.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/n8n.svg" alt="" class="tool-icon"><h4>n8n</h4><p>Open-source workflow automation.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/pabbly.svg" alt="" class="tool-icon"><h4>Pabbly Connect</h4><p>Affordable automations.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/integrately.svg" alt="" class="tool-icon"><h4>Integrately</h4><p>One-click automations.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/ifttt.svg" alt="" class="tool-icon"><h4>IFTTT</h4><p>Simple triggers for devices.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/workato.svg" alt="" class="tool-icon"><h4>Workato</h4><p>Enterprise automation platform.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/trayio.svg" alt="" class="tool-icon"><h4>Tray.io</h4><p>API-first integrations.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/power.svg" alt="" class="tool-icon"><h4>Power Automate</h4><p>Microsoft automations.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/uipath.svg" alt="" class="tool-icon"><h4>UiPath Cloud</h4><p>RPA & automation.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/automationanywhere.svg" alt="" class="tool-icon"><h4>Automation Anywhere</h4><p>RPA for enterprises.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/nintex.svg" alt="" class="tool-icon"><h4>Nintex</h4><p>Workflow automation suite.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/tallyfy.svg" alt="" class="tool-icon"><h4>Tallyfy</h4><p>Process automation.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+        </div>
+      </div>
+
+      <div class="tool-category">
+        <h3>Open-Source Self-Hosted</h3>
+        <div class="tool-grid">
+          <div class="tool-card"><img src="assets/img/nodered.svg" alt="" class="tool-icon"><h4>Node-RED</h4><p>Flow-based programming for IoT.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/airflow.svg" alt="" class="tool-icon"><h4>Apache Airflow</h4><p>Batch & DAG scheduling.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/huginn.svg" alt="" class="tool-icon"><h4>Huginn</h4><p>Event-driven agents.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/trigger.svg" alt="" class="tool-icon"><h4>Trigger.dev</h4><p>Serverless background jobs.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/activepieces.svg" alt="" class="tool-icon"><h4>Activepieces</h4><p>Low-code automation engine.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/windmill.svg" alt="" class="tool-icon"><h4>Windmill.dev</h4><p>Open automation tools.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/budibase.svg" alt="" class="tool-icon"><h4>Budibase</h4><p>Open UIs for apps.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/appsmith.svg" alt="" class="tool-icon"><h4>Appsmith</h4><p>Low-code dashboards.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/tooljet.svg" alt="" class="tool-icon"><h4>Tooljet</h4><p>Low code platform.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/directus.svg" alt="" class="tool-icon"><h4>Directus</h4><p>Headless CMS & APIs.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+        </div>
+      </div>
+
+      <div class="tool-category">
+        <h3>No-Code App Builders</h3>
+        <div class="tool-grid">
+          <div class="tool-card"><img src="assets/img/bubble.svg" alt="" class="tool-icon"><h4>Bubble</h4><p>Visual web apps.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/flutterflow.svg" alt="" class="tool-icon"><h4>FlutterFlow</h4><p>Mobile app builders.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/retool.svg" alt="" class="tool-icon"><h4>Retool</h4><p>Internal tools fast.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/glide.svg" alt="" class="tool-icon"><h4>Glide</h4><p>Sheets-driven apps.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/adalo.svg" alt="" class="tool-icon"><h4>Adalo</h4><p>App builder.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/appgyver.svg" alt="" class="tool-icon"><h4>AppGyver</h4><p>Composer for apps.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/backendless.svg" alt="" class="tool-icon"><h4>Backendless</h4><p>Backend as a service.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/draftbit.svg" alt="" class="tool-icon"><h4>Draftbit</h4><p>React Native builder.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/weweb.svg" alt="" class="tool-icon"><h4>WeWeb</h4><p>No-code web apps.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+        </div>
+      </div>
+
+      <div class="tool-category">
+        <h3>Enterprise Integrations & API Engines</h3>
+        <div class="tool-grid">
+          <div class="tool-card"><img src="assets/img/parabola.svg" alt="" class="tool-icon"><h4>Parabola</h4><p>Data flows for enterprises.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/boomi.svg" alt="" class="tool-icon"><h4>Boomi</h4><p>iPaaS integration.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/mulesoft.svg" alt="" class="tool-icon"><h4>Mulesoft</h4><p>API-led connectivity.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/nango.svg" alt="" class="tool-icon"><h4>Nango</h4><p>Connectors for platforms.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/prismatic.svg" alt="" class="tool-icon"><h4>Prismatic</h4><p>Integration toolkit.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/merge.svg" alt="" class="tool-icon"><h4>Merge.dev</h4><p>Unified APIs for HR, CRM.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+          <div class="tool-card"><img src="assets/img/hotglue.svg" alt="" class="tool-icon"><h4>Hotglue</h4><p>Embeddable connectors.</p><a class="btn btn-sm" href="#">View Projects</a></div>
+        </div>
+      </div>
+
+    </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <div class="logo-small">KAIZEN</div>
+        <p>Built by Kaizen Automation Hub</p>
+        <p class="copyright">© <span id="year"></span> Kaizen Automation Hub</p>
+      </div>
+      <div class="footer-middle">
+        <h4>Quick Links</h4>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+          <a href="policies.html">Policies</a>
+        </nav>
+      </div>
+      <div class="footer-right">
+        <h4>Connect</h4>
+        <div class="socials">
+          <a href="#" class="social">🐦</a>
+          <a href="#" class="social">💼</a>
+          <a href="#" class="social">📘</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
