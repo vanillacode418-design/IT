@@ -1,62 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact AI Automation Agency: Get in touch for AI automation services.">
-    <title>AI Automation Agency - Contact Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kaizen Automation Hub — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">AIAA</div>
-            <ul class="nav-links">
-                <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
-                <li><a href="how-we-work.html"><i class="fas fa-rocket"></i> How We Work</a></li>
-                <li><a href="tools.html"><i class="fas fa-tools"></i> Tools</a></li>
-                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+<body class="dark">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-glow">KAIZEN</div>
+      <div class="brand-sub">Automation Hub</div>
+    </div>
+    <nav class="mainnav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="policies.html">Policies</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-ghost">Book Free Consultation</button>
+    </div>
+  </header>
 
-    <main>
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-            <div class="contact-info">
-                <p>Address: Mumbai, India</p>
-                <p>Email: info@aiaa.com</p>
-                <p>Phone: +91-123-4567890</p>
-            </div>
-            <div class="map">
-                <!-- Placeholder for Google Maps -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.989606031747!2d72.83516331490216!3d19.063949887092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8e5b5c0a4f1%3A0x5f7a4d0a5f0a4d0a!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1630000000000" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
-    </main>
+  <main>
+    <section class="page-hero small">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p class="lead">Let's talk about your project. Book a consultation or send us a message.</p>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 AI Automation Agency. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+    <section class="container contact-grid">
+      <div class="contact-form card-gloss">
+        <h2>Send us a message</h2>
+        <form id="contactForm" action="#" onsubmit="return false;">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="name@company.com" required>
+          </div>
+          <div class="form-row">
+            <label>Phone</label>
+            <input type="tel" id="phone" placeholder="+91 98765 43210">
+          </div>
+          <div class="form-row">
+            <label>Message</label>
+            <textarea id="message" rows="6" placeholder="How can we help?"></textarea>
+          </div>
+          <div class="form-row">
+            <button class="btn btn-primary" id="sendBtn">Send Message</button>
+            <button class="btn btn-outline" id="clearBtn" type="reset">Clear</button>
+          </div>
+        </form>
+        <div id="formStatus" class="form-status"></div>
+      </div>
+
+      <aside class="contact-info">
+        <div class="card-gloss">
+          <h3>Contact</h3>
+          <p><strong>Email:</strong> hello@kaizenhub.example</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Business hours:</strong> Mon–Fri, 09:00–18:00 IST</p>
         </div>
-        <a href="#">Privacy Policy</a>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="card-gloss">
+          <h3>Quick actions</h3>
+          <div class="btn-block">
+            <a class="btn btn-primary" href="https://wa.me/919876543210" target="_blank">WhatsApp</a>
+            <a class="btn btn-outline" href="tel:+919876543210">Call</a>
+          </div>
+        </div>
+
+        <div class="card-gloss">
+          <h3>Map</h3>
+          <div class="map">
+            <!-- placeholder embedded map; replace src as needed -->
+            <iframe width="100%" height="180" frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160828464!2d72.7410998!3d19.0821978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63f0a49f6ff%3A0x1c3f4a6e2589b2f7!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+              allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <div class="logo-small">KAIZEN</div>
+        <p>Built by Kaizen Automation Hub</p>
+        <p class="copyright">© <span id="year4"></span> Kaizen Automation Hub</p>
+      </div>
+      <div class="footer-middle">
+        <h4>Quick Links</h4>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+          <a href="policies.html">Policies</a>
+        </nav>
+      </div>
+      <div class="footer-right">
+        <h4>Connect</h4>
+        <div class="socials">
+          <a href="#" class="social">🐦</a>
+          <a href="#" class="social">💼</a>
+          <a href="#" class="social">📘</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
