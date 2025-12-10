@@ -144,41 +144,59 @@
       </div>
     </section>
 
-    <!-- SHOWCASE: Virtual Calling Use Cases (50+) -->
-    <section class="use-cases container">
-      <h2>Virtual Calling Use Cases</h2>
-      <p class="lead">50+ ready-to-deploy call flows and templates for every industry.</p>
-      <div class="cases-grid">
-        <!-- We'll list 50 cards programmatically in HTML for portability -->
-        <!-- Use same .case-card style; hover animations enabled in CSS -->
-        <script>
-          // This small inline script inserts 50 cards to keep HTML slimmer.
-          (function(){
-            const cases = [
-"Sales calls","Lead qualification","Customer support","Emergency helpdesk","Appointment scheduling",
-"COD verification","Medicine reminders","Clinic reminders","Class notifications","Payment reminders",
-"Delivery confirmation","Restaurant booking","Travel agent calls","School announcements","Fitness trainer reminders",
-"Real estate follow-ups","Loan reminder calls","HR screening calls","Event RSVP calls","Automated surveys",
-"Ticket booking confirmation","Subscription renewal reminders","Utility bill reminders","Insurance follow-ups","Warranty checks",
-"Feedback collection calls","Product return scheduling","Subscription activation calls","Outage notifications","Maintenance alerts",
-"Inventory restock alerts","Donor outreach calls","Political outreach calls","NGO volunteer coordination","Product launch calls",
-"Survey recruitment calls","Debt collection reminders","Appointment confirmations","Candidate interview reminders","Customer NPS calls",
-"Order cancellation recovery","Cross-sell calls","Upsell appointment setting","Class attendance reminders","Electricity usage alerts",
-"Water usage alerts","Smart-meter thresholds","Fleet dispatch alerts","Security alarm follow-ups","On-call shift notifications"
-            ];
-            const grid = document.createElement('div');
-            cases.forEach((c, i) => {
-              const card = document.createElement('div');
-              card.className = 'case-card';
-              card.innerHTML = `<svg class="small-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><h4>${c}</h4><p>Template flow for ${c.toLowerCase()} via voice or SMS.</p>`;
-              grid.appendChild(card);
-            });
-            grid.className = 'cases-grid-list';
-            document.currentScript.parentNode.appendChild(grid);
-          })();
-        </script>
+<!-- SHOWCASE: Virtual Calling Use Cases (50+) -->
+<section class="use-cases">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-12">
+        <h2>Virtual Calling Use Cases</h2>
+        <p class="lead">50+ ready-to-deploy call flows and templates for every industry.</p>
+
+        <!-- cards will be injected here -->
+        <div class="cases-row">
+          <script>
+            (function(){
+              const cases = [
+                "Sales calls","Lead qualification","Customer support","Emergency helpdesk","Appointment scheduling",
+                "COD verification","Medicine reminders","Clinic reminders","Class notifications","Payment reminders",
+                "Delivery confirmation","Restaurant booking","Travel agent calls","School announcements","Fitness trainer reminders",
+                "Real estate follow-ups","Loan reminder calls","HR screening calls","Event RSVP calls","Automated surveys",
+                "Ticket booking confirmation","Subscription renewal reminders","Utility bill reminders","Insurance follow-ups","Warranty checks",
+                "Feedback collection calls","Product return scheduling","Subscription activation calls","Outage notifications","Maintenance alerts",
+                "Inventory restock alerts","Donor outreach calls","Political outreach calls","NGO volunteer coordination","Product launch calls",
+                "Survey recruitment calls","Debt collection reminders","Appointment confirmations","Candidate interview reminders","Customer NPS calls",
+                "Order cancellation recovery","Cross-sell calls","Upsell appointment setting","Class attendance reminders","Electricity usage alerts",
+                "Water usage alerts","Smart-meter thresholds","Fleet dispatch alerts","Security alarm follow-ups","On-call shift notifications"
+              ];
+
+              const row = document.createElement('div');
+              row.className = 'cases-row-inner';
+
+              cases.forEach(c => {
+                const card = document.createElement('div');
+                card.className = 'case-card';
+                card.innerHTML = `
+                  <svg class="small-icon" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"/>
+                  </svg>
+                  <h4>${c}</h4>
+                  <p>Template flow for ${c.toLowerCase()} via voice or SMS.</p>
+                `;
+                row.appendChild(card);
+              });
+
+              document.currentScript.parentNode.appendChild(row);
+            })();
+          </script>
+        </div>
+
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- AUTOMATION TOOLS PORTFOLIO -->
     <section class="tools container">
