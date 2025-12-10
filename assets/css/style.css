@@ -164,3 +164,198 @@ body.dark{
   .tool-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
   .container{padding:20px}
 }
+
+/* ----------------------------
+   GLOBAL SAFETY FIXES
+----------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body.dark {
+  background: #0b0f19;
+  color: #e5e7eb;
+}
+
+/* ----------------------------
+   HERO SLIDER
+----------------------------- */
+
+.hero, .slide {
+  height: 100vh;
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.75) 0%,
+    rgba(0,0,0,.55) 40%,
+    rgba(0,0,0,.25) 100%
+  );
+  z-index: 1;
+}
+
+.slide-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.slide-inner h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.2;
+}
+
+.slide-inner p {
+  font-size: 1.1rem;
+  max-width: 650px;
+  opacity: .9;
+}
+
+/* ----------------------------
+   BUTTONS
+----------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------
+   SVG ICON ALIGNMENT FIX
+----------------------------- */
+
+.icon,
+.small-icon {
+  width: 36px;
+  height: 36px;
+  stroke: #7dd3fc;
+  fill: none;
+  stroke-width: 1.8;
+  margin-bottom: 10px;
+}
+
+.small-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.gloss-card,
+.case-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.gloss-card h3,
+.case-card h4 {
+  margin-top: 6px;
+}
+
+/* ----------------------------
+   USE CASES GRID
+----------------------------- */
+
+.cases-row-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.case-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px;
+  flex: 0 0 calc(25% - 20px);
+}
+
+@media (max-width: 992px) {
+  .case-card { flex: 0 0 calc(50% - 20px); }
+}
+
+@media (max-width: 576px) {
+  .case-card { flex: 0 0 100%; }
+}
+
+/* ----------------------------
+   TOOLS GRID ALIGNMENT
+----------------------------- */
+
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tool-icon {
+  max-width: 48px;
+  margin-bottom: 12px;
+}
+
+/* ----------------------------
+   FOOTER (POLISHED)
+----------------------------- */
+
+.site-footer {
+  background: #070a12;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 80px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 48px 20px;
+}
+
+.footer-inner h4 {
+  margin-bottom: 12px;
+}
+
+.footer-inner nav a {
+  display: block;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.footer-inner nav a:hover {
+  color: #fff;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
